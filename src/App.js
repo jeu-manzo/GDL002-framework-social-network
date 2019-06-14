@@ -1,11 +1,18 @@
 import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import Login from './Components/Containers/Login'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hola</h1>
-    </div>
-  );
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <>
+          <Route exact path="/" component={Login} />
+        </>
+      </Router>
+    )
+  }
 }
 
 export default App;
