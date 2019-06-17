@@ -16,6 +16,8 @@
   width: 200px;
   height: 40px;
   margin-top: 100px;
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 .right-login {
@@ -51,6 +53,7 @@
   height: 50px;
   font-size: 20px;
   margin: 20px 0px 20px 0px;
+  border-radius: 10px;
 }
 
 .select, .btn-login {

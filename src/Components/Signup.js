@@ -25,9 +25,11 @@ class Signup extends Component {
         <input className="input-login" type="text" name="user" value={this.state.user} onChange={this.handleChange}/>
         <select className="input-login select" name="status"  defaultValue={'default'} >
           <option className="select-option" value="default" disabled hidden>StatusVeg</option>
-          <option className="select-option">Appointment</option>
-          <option className="select-option">Interview</option>
-          <option className="select-option">Regarding a post</option>
+          <option className="select-option">Vegano</option>
+          <option className="select-option">Vegetariano</option>
+          <option className="select-option">En transición</option>
+          <option className="select-option">Curioso</option>
+          <option className="select-option">Anóninomo</option>
         </select>
         <input className="input-login" type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
         <button className="btn-login" type="submit">Crear Cuenta</button>
