@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import firebase from '../config/firebase.js';
 
 
 class Signup extends Component {
   constructor(props) {
     super(props);
+    this.signup = this.signup.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       email: 'Correo',
@@ -14,6 +16,15 @@ class Signup extends Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+  }
+
+  signup(e) {
+    e.preventDefault();
+    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+    }).then((u) => { console.log(u) })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   render() {
@@ -31,8 +42,8 @@ class Signup extends Component {
           <option className="select-option">Curioso</option>
           <option className="select-option">Anóninomo</option>
         </select>
-        <input className="input-login" type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
-        <button className="btn-login" type="submit">Crear Cuenta</button>
+        <input className="input-login" type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+        <button className="btn-login" type="submit" onClick={this.signup}>Crear Cuenta</button>
       </form>
       </section>
     )
