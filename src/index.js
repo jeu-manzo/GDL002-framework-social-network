@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 //styles:
-import './styles/login.css';
 import './styles/index.css';
+import './styles/login.css';
+import './styles/navbar.css';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

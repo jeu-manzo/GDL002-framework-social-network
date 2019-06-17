@@ -1,12 +1,11 @@
 import React from 'react';
-import Logout from '../Logout'
+import Navbar from '../Navbar';
 
 class Home extends React.Component {
   render () {
     return (
       <div>
-        Holi
-        <Logout/>
+        <Navbar/>
       </div>
     )
   }

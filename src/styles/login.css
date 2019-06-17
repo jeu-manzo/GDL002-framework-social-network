@@ -34,6 +34,14 @@
   align-items: center;
 }
 
+.signup {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background-color: #51ad2b;
+
+}
+
 .buttons-login {
   display: flex;
   justify-content: center;
