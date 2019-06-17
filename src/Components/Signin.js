@@ -20,7 +20,7 @@ class Signin extends Component {
     e.preventDefault();
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).catch((error) => {
-      console.log(error);
+      alert("Correo y/o Contraseña inválidos");
     });
   }
 

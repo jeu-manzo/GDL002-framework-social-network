@@ -1,5 +1,6 @@
 {
   "name": "social-network",
+  "homepage": "https://jeu-manzo.github.io/GDL002-framework-social-network/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
