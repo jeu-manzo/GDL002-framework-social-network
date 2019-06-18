@@ -8,7 +8,7 @@ class Logout extends React.Component {
 
   render () {
     return (
-      <button onClick={this.logout}>Cerrar Sesión</button>
+      <a href="/home" onClick={this.logout}>Cerrar Sesión</a>
     )
   }
 }
