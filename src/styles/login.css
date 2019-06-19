@@ -16,9 +16,17 @@
   width: 200px;
   height: 40px;
   margin-top: 100px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 20px;
+  outline: none;
+  /* outline-color: #ee4b4c;
+  outline-radius: 10px; */
 }
+
+.btn-login-left:focus {
+  box-shadow: 0px 0px 5px .2px rgba(238,75,76,0.95);;
+}
+
 
 .right-login {
   display: flex;
@@ -46,10 +54,9 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  /* border: 2px solid black; */
 }
 
-.input-login, .btn-login {
+.btn-login {
   width: 250px;
   height: 50px;
   font-size: 20px;
@@ -59,4 +66,52 @@
 
 .select, .btn-login {
   width: 100%;
+}
+
+
+/* style input */
+
+.floating-label {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.floating-label input {
+  font-size:  16px;
+   padding:  20px 0px;
+   padding-left: 15px;
+   height:  56px;
+   border:  none;
+   border-radius: 5px;
+   background:  #fff;
+   min-width:  280px;
+   box-sizing:  border-box;
+   transition:  all .3s linear;
+   color:  #000;
+   font-weight:  400;
+   -webkit-appearance:  none;
+}
+
+.floating-label input:focus {
+  border-bottom:  solid 1px white;
+    outline: 0;
+    box-shadow:  0 2px 6px -8px rgba(white, .45);
+}
+
+.floating-label input:not(:placeholder-shown) {
+  padding: 28px 0px 12px 15px;
+}
+
+.floating-label input:not(:placeholder-shown) + label {
+  transform:  translateY(-10px);
+  opacity:  .7;
+  padding-left: 15px;
+}
+
+.floating-label label {
+  position:  absolute;
+    top: calc(50% - 7px);
+    left:  0;
+    opacity:  0;
+    transition:  all .3s ease;
 }

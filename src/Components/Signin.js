@@ -7,8 +7,8 @@ class Signin extends Component {
     this.signin = this.signin.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      email: 'Correo',
-      password: 'Contraseña'
+      email: '',
+      password: ''
     };
   }
 
@@ -29,8 +29,14 @@ class Signin extends Component {
       <section className="signin">
         <h1>Inciar Sesión</h1>
         <form className="form-login">
-          <input className="input-login" type="email" name="email" value={this.state.email} onChange={this.handleChange}/>
-          <input className="input-login" type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+          <div className="floating-label">
+            <input id="email" className="input-login" type="email" name="email" placeholder="Correo" value={this.state.email} onChange={this.handleChange}/>
+            <label htmlFor="email">Correo: </label>
+          </div>
+          <div className="floating-label">
+            <input id="password" className="input-login" type="password" name="password" placeholder="Contraseña" value={this.state.password} onChange={this.handleChange}/>
+            <label htmlFor="password">Contraseña: </label>
+          </div>
           <button className="btn-login" type="submit" onClick={this.signin}>Iniciar Sesión</button>
         </form>
       </section>
