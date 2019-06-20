@@ -1,18 +1,14 @@
 import React from 'react';
-import Signup from '../Signup';
-import Signin from '../Signin';
 import firebase from '../../config/firebase.js'
-import Home from './Home'
+import Home from './Home';
+import FormLogin from '../FormLogin';
 
-import logo from '../../images/logoVeganet.png'
+
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.signinComponent = this.signinComponent.bind(this);
-    this.signupComponent = this.signupComponent.bind(this);
     this.state = {
-      component: <Signin/>,
       user: null
     };
   }
@@ -33,14 +29,6 @@ class Login extends React.Component {
     });
   }
 
-  signinComponent() {
-    this.setState({ component: <Signin/> });
-  }
-
-  signupComponent() {
-    this.setState({ component: <Signup/> });
-  }
-
   render () {
     return (
       <>
@@ -48,20 +36,8 @@ class Login extends React.Component {
             <Home/>
             ) :
             (
-              <div className='login'>
-                <section className='left-login'>
-                  <img src={logo} alt="Logo" />
-                  <main className="buttons-login">
-                    <button className="btn-login-left" onClick={this.signinComponent}>Iniciar Sesión</button>
-                    <button className="btn-login-left" onClick={this.signupComponent}>Crear Cuenta</button>
-                  </main>
-                </section>
-
-                <section className='right-login'>
-                  {this.state.component}
-                </section>
-              </div>
-          )}
+              <FormLogin />
+            )}
         </>
 
     )

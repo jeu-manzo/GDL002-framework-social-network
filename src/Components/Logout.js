@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from '../config/firebase.js'
+import {Link} from 'react-router-dom'
 
 class Logout extends React.Component {
   logout = () => {
@@ -8,7 +9,7 @@ class Logout extends React.Component {
 
   render () {
     return (
-      <a href="/home" onClick={this.logout}>Cerrar Sesión</a>
+      <Link to="/Login" onClick={this.logout}>Cerrar Sesión</Link>
     )
   }
 }

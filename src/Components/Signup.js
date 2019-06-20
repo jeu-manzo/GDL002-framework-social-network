@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../config/firebase.js';
 
-
 class Signup extends Component {
   constructor(props) {
     super(props);

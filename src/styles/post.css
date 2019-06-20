@@ -1,0 +1,22 @@
+.post {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 20px;
+  min-width: 500px;
+  min-height: 250px;
+  max-height: 400px;
+  border: 1px solid black;
+}
+
+
+.event-user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.create-event {
+  display: flex;
+  justify-content: space-around;
+}
