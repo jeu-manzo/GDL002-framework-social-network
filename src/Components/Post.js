@@ -14,22 +14,22 @@ class Post extends Component {
           Usuario
         </header>
         <main>
-          Comentario
+          <p>Aquí van a ir las publicaciones de los amigos</p>
         </main>
         <footer>
           <div className="event-user">
-            <span>
-              <FontAwesomeIcon icon={faHeart} /> X
+            <span className="icon-post">
+              <FontAwesomeIcon icon={faHeart} color="red"/> 0
             </span>
             <span>
-              Tantos Comentarios
+              0 Comentarios
             </span>
           </div>
           <div className="create-event">
-            <span>
+            <span className="icon-event">
               <FontAwesomeIcon icon={faHeart} /> Me gusta
             </span>
-            <span>
+            <span className="icon-event">
               <FontAwesomeIcon icon={faComment} /> Comentar
             </span>
           </div>
