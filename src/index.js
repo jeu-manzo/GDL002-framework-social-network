@@ -12,6 +12,7 @@ import './styles/profile.css';
 import './styles/navbar.css';
 import './styles/friendsPost.css';
 import './styles/userPost.css';
+import './styles/createPost.css';
 
 
 
