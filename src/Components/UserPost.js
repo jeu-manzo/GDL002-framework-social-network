@@ -15,7 +15,13 @@ class UserPost extends Component {
             Foto
             Usuario
           </span>
-          <FontAwesomeIcon icon={faEllipsisV} className="more"/>
+          <div className="more">
+            <span className="more-options">
+              <span>Editar</span>
+              <span>Eliminar</span>
+            </span>
+            <FontAwesomeIcon icon={faEllipsisV} className="more-icon"/>
+          </div>
         </header>
         <main>
           <p>Aquí va a ir la publicación del Usuario</p>

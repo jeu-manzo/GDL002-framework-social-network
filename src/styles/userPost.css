@@ -5,8 +5,37 @@
 
 .more {
   color: gray;
+  position: relative;
 }
 
 .more:hover {
+  color: #ee4b4c;
+}
+
+.more .more-options {
+  visibility: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 5;
+  background-color: #ebe5e4;
+  color: black;
+  border: 1px solid #e3dad9;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.more:hover .more-options{
+  visibility: visible;
+}
+
+.more-options span {
+  padding: 5px;
+  margin: 5px;
+}
+
+.more-options span:hover {
   color: #ee4b4c;
 }
