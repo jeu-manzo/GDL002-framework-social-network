@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import firebase from '../config/firebase.js';
+import firebase from '../services/firebase';
 
 class Signin extends Component {
   constructor(props) {
     super(props);
-    this.signin = this.signin.bind(this);
-    this.handleChange = this.handleChange.bind(this);
     this.state = {
       email: '',
       password: ''
     };
   }
 
-  handleChange(e) {
+  handleChange = (e)  => {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  signin(e) {
+  handleSignin = (e) => {
     e.preventDefault();
-    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-    }).catch((error) => {
-      alert("Correo y/o Contraseña inválidos");
-    });
+    firebase.signin(this.state.email, this.state.password);
   }
 
   render() {
@@ -37,7 +32,7 @@ class Signin extends Component {
             <input id="password" className="input-login" type="password" name="password" placeholder="Contraseña" value={this.state.password} onChange={this.handleChange}/>
             <label htmlFor="password">Contraseña: </label>
           </div>
-          <button className="btn-login" type="submit" onClick={this.signin}>Iniciar Sesión</button>
+          <button className="btn-login" type="submit" onClick={this.handleSignin}>Iniciar Sesión</button>
         </form>
       </section>
     )
