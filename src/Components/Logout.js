@@ -1,6 +1,6 @@
 import React from 'react';
-import firebase from '../services/firebase'
-import {Link} from 'react-router-dom'
+import firebase from '../services/firebase';
+import {Link} from 'react-router-dom';
 
 class Logout extends React.Component {
 
@@ -11,7 +11,7 @@ class Logout extends React.Component {
 
   render () {
     return (
-      <Link to="/Login" onClick={this.handleLogout}>Cerrar Sesión</Link>
+      <Link to="/login" onClick={this.handleLogout}>Cerrar Sesión</Link>
     )
   }
 }

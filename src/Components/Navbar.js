@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import Logout from './Logout';
 import logo from '../images/logo-bco.png';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 class Navbar extends Component {
   render () {
@@ -17,19 +19,19 @@ class Navbar extends Component {
           </div>
         </section>
         <ul>
-          <li><a href="/home" >Foto</a></li>
-          <li><a href="/home" >Usuario</a></li>
-          <li><a href="/home" >Inicio</a></li>
-          <li><a href="/home" aria-haspopup="true">Productos</a>
+          <li><Link to="/home" >Foto</Link></li>
+          <li><Link to="/profile" >Usuario</Link></li>
+          <li><Link to="/home" >Inicio</Link></li>
+          <li><Link to="/home" aria-haspopup="true">Productos</Link>
           <ul className="dropdown" aria-label="submenu">
-            <li><a href="/home" >Buscar Producto</a></li>
-            <li><a href="/home" >Agregar Producto</a></li>
-            <li><a href="/home" >Mis Listas</a></li>
+            <li><Link to="/home" >Buscar Producto</Link></li>
+            <li><Link to="/home" >Agregar Producto</Link></li>
+            <li><Link to="/home" >Mis Listas</Link></li>
           </ul>
           </li>
-          <li><a href="/home" aria-haspopup="true"><FontAwesomeIcon icon={faCaretDown} /></a>
+          <li><Link to="/home" aria-haspopup="true"><FontAwesomeIcon icon={faCaretDown} /></Link>
             <ul className="dropdown" aria-label="submenu">
-              <li><a href="/home" >Ajustes</a></li>
+              <li><Link to="/home" >Ajustes</Link></li>
               <li><Logout/></li>
             </ul>
           </li>

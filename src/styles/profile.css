@@ -1,9 +1,5 @@
-.home {
+.profile {
   height: 100%;
   display: flex;
   flex-flow: column;
-}
-
-.post {
-  align-self: center;
 }
