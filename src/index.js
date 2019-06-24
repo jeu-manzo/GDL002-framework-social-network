@@ -7,9 +7,12 @@ import * as serviceWorker from './serviceWorker';
 import './styles/index.css';
 import './styles/login.css';
 import './styles/home.css';
+import './styles/profile.css';
 //Compoenents:
 import './styles/navbar.css';
-import './styles/post.css';
+import './styles/friendsPost.css';
+import './styles/userPost.css';
+
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

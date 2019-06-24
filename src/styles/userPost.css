@@ -1,0 +1,12 @@
+.post header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.more {
+  color: gray;
+}
+
+.more:hover {
+  color: #ee4b4c;
+}
