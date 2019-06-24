@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
-class Post extends Component {
+class FriendsPost extends Component {
 
 
   render () {
@@ -39,4 +39,4 @@ class Post extends Component {
   }
 };
 
-export default Post;
+export default FriendsPost;
