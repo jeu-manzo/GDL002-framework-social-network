@@ -1,4 +1,5 @@
 import firebase from '../config/firebase.js';
+const dataBase = firebase.firestore();
 
 function signup(email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password).then((u) => {
@@ -19,8 +20,30 @@ function logout() {
   firebase.auth().signOut();
 }
 
+
+
+function sendPost(textarea) {
+  dataBase.collection("posts").add({
+      comment: textarea,
+  })
+  .catch(function(error) {
+      console.error("Error writing document: ", error);
+  })
+}
+
+// function getPosts() {
+//   dataBase.collection("posts").get().then(function(querySnapshot) {
+//     querySnapshot.forEach(function(doc) {
+//       doc.data().comment
+//     });
+// });
+// }
+
+
+
 export default {
   signup,
   signin,
-  logout
+  logout,
+  sendPost
 };

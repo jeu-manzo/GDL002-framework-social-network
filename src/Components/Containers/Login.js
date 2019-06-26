@@ -22,6 +22,7 @@ class Login extends React.Component {
       if (user) {
         this.setState({ user });
         localStorage.setItem('user', user.uid);
+        console.log(user);
       } else {
         this.setState({ user: null });
         localStorage.removeItem('user');

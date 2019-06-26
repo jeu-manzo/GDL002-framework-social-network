@@ -3,6 +3,9 @@ import Navbar from '../Navbar';
 import FriendsPost from '../FriendsPost';
 
 class Home extends React.Component {
+
+
+
   render () {
     return (
       <div className="home">
